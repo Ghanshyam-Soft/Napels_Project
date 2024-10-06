@@ -1,0 +1,27 @@
+server:
+    port: 9100 
+spring: 
+  application:
+    name: numbes-api-svc
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:oracle:thin:@hv0022.telecom.ptt.nl:1521:D2327A
+    username: NPCURREN
+    password: WasHandje
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    tomcat: 
+      connectionProperties: oracle.jdbc.timezoneAsRegion=false
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.Oracle9iDialect
+    properties:
+      hibernate:
+        default_schema: NPCURREN
+        format_sql: true
+logging:
+  file: C:/Users/applogs/numbesapisvc.log 
+napels:
+    authserver:
+         url: https://napelsuat-authserver.tcloud.kpn.org
+
